@@ -1,0 +1,9 @@
+alias krilin="git push origin master"
+alias goku="git push origin master && git push heroku master"
+alias subl="(subl . &)"
+fliptable(){echo "(╯°□ °)╯︵ ┻━┻"}
+alias nau="nautilus ."
+alias c="clear"
+abrir(){xdg-open $1}
+alias starwars="telnet towel.blinkenlights.nl"
+calc(){echo "$*" | bc -l;}
