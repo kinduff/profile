@@ -7,3 +7,4 @@ alias c="clear"
 abrir(){xdg-open $1}
 alias starwars="telnet towel.blinkenlights.nl"
 calc(){echo "$*" | bc -l;}
+alias liram="sync && sudo sysctl -w vm.drop_caches=3"
