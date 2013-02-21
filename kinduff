@@ -8,4 +8,20 @@ abrir(){xdg-open $1}
 alias starwars="telnet towel.blinkenlights.nl"
 calc(){echo "$*" | bc -l;}
 alias liram="sync && sudo sysctl -w vm.drop_caches=3"
-ufeed(){while true; do heroku run rake update:posts --app ubuntufeed; echo 'Done.'; date; sleep 3600; done}
+ufeed(){
+  if [ "$1" = "tweet" ]; then
+    while true; do
+      noglob heroku run rake update:posts[true] --app ubuntufeed;
+      echo 'Done.'
+      date
+      sleep 3600
+    done
+  else
+    while true; do
+      heroku run rake update:posts --app ubuntufeed;
+      echo 'Done.'
+      date
+      sleep 3600
+    done
+  fi
+}
