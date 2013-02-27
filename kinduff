@@ -16,6 +16,8 @@ ufeed(){
       date
       sleep 3600
     done
+  elif [ "$1" = "show" ]; then
+     heroku run rake update:show --app ubuntufeed
   else
     while true; do
       heroku run rake update:posts --app ubuntufeed;
