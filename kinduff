@@ -27,3 +27,19 @@ ufeed(){
     done
   fi
 }
+alias want='sudo apt-get install'
+alias not_want='sudo apt-get remove'
+alias can_haz='sudo apt-get install'
+alias kthxbai='exit'
+alias nomnom='rm'
+alias fuckyou='sudo halt'
+alias dance="echo no"
+alias usdo='echo WAT?'
+alias sudu='echo try again'
+alias sodu='echo nope'
+alias dosu='echo NO'
+alias duso='echo sigh'
+alias sdou='echo nononononononono'
+noglob alias who_you_gonna_call?='echo Ghost Busters!'
+alias stop='echo Hammer Time!'
+alias poke='touch'
