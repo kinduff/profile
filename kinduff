@@ -43,3 +43,7 @@ alias sdou='echo nononononononono'
 noglob alias who_you_gonna_call?='echo Ghost Busters!'
 alias stop='echo Hammer Time!'
 alias poke='touch'
+lorem(){
+  cat ~/profile/lorem | xclip -selection c
+  echo 'Lorem ipsum copiado!'
+}
