@@ -55,3 +55,4 @@ hercon(){
     heroku run console --app $1
   fi
 }
+alias gitg='(gitg &)'
