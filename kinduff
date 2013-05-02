@@ -47,3 +47,11 @@ lorem(){
   cat ~/profile/lorem | xclip -selection c
   echo 'Lorem ipsum copiado!'
 }
+alias dbpush='~/.rvm/bin/ruby-1.9.2-p290 /usr/bin/heroku db:push'
+hercon(){
+  if [ -z "$1" ]; then
+    heroku run console
+  elif then
+    heroku run console --app $1
+  fi
+}
