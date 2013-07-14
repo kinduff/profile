@@ -56,3 +56,4 @@ hercon(){
   fi
 }
 alias gitg='(gitg &)'
+alias q='exit'
