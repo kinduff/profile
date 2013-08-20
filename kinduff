@@ -58,3 +58,4 @@ hercon(){
 alias gitg='(gitg &)'
 alias q='exit'
 alias getssh='xclip -sel clip < ~/.ssh/id_rsa.pub'
+alias lastc='nocorrect git log --oneline -n 1 | grep ...'
