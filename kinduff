@@ -59,3 +59,9 @@ alias gitg='(gitg &)'
 alias q='exit'
 alias getssh='xclip -sel clip < ~/.ssh/id_rsa.pub'
 alias lastc='nocorrect git log --oneline -n 1 | grep ...'
+dbpull(){
+  heroku pgbackups:capture --expire
+  curl -o latest.dump `heroku pgbackups:url`
+  pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d dslab_development latest.dump
+  rm latest.dump
+}
