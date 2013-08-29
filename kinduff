@@ -62,7 +62,7 @@ alias lastc='nocorrect git log --oneline -n 1 | grep ...'
 dbpull(){
   heroku pgbackups:capture --expire
   curl -o latest.dump `heroku pgbackups:url`
-  pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d dslab_development latest.dump
+  pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d $1 latest.dump
   rm latest.dump
 }
 mp3toavi(){
