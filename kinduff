@@ -65,3 +65,9 @@ dbpull(){
   pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d dslab_development latest.dump
   rm latest.dump
 }
+mp3toavi(){
+  for file in *.mp3; do
+    file=${file%.*}
+    noglob optirun ffmpeg -loop 1 -i "cover.jpg" -i "$file.mp3" -acodec copy  -shortest -qscale 5 -s 640x480 -aspect 1:1 "$file.avi"
+  done
+}
