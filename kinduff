@@ -71,3 +71,12 @@ mp3toavi(){
     noglob optirun ffmpeg -loop 1 -i "cover.jpg" -i "$file.mp3" -acodec copy  -shortest -qscale 5 -s 640x480 -aspect 1:1 "$file.avi"
   done
 }
+alias nextsong="rc --next"
+alias prevsong="rc --previous"
+alias currsong="rc --print-playing"
+alias volup="rc --volume-up"
+alias voldown="rc --volume-down"
+alias mute="rc --mute"
+alias unmute="rc --unmute"
+alias activate="rc --play-pause"
+alias pausesong="rc --pause"
