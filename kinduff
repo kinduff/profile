@@ -80,3 +80,14 @@ alias mute="rc --mute"
 alias unmute="rc --unmute"
 alias activate="rc --play-pause"
 alias pausesong="rc --pause"
+alias betty="~/betty/main.rb"
+alias cheatgit='GIT_COMMITTER_DATE="`date`" git commit --amend --date "`date`"'
+vagrant-exec() {
+  echo "vagrant@DesertBookStore:/vagrant\$ ${*}"
+  vagrant ssh -c "cd /vagrant && ${*}"
+}
+alias nibley-server="vagrant-exec bundle exec foreman start"
+alias nibley-rake="vagrant-exec bundle exec rake"
+alias nibley-rspec="vagrant-exec bundle exec rspec"
+alias nibley-pry="vagrant-exec bundle exec pry-remote"
+alias nibley-bi="vagrant-exec bundle install"
