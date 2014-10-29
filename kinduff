@@ -91,3 +91,6 @@ alias nibley-rake="vagrant-exec bundle exec rake"
 alias nibley-rspec="vagrant-exec bundle exec rspec"
 alias nibley-pry="vagrant-exec bundle exec pry-remote"
 alias nibley-bi="vagrant-exec bundle install"
+copy() {
+  cat $1 | xclip -selection clipboard
+}
